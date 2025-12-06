@@ -83,21 +83,21 @@ class IncidentXAppLoginWindow:
         # Logo/Title with SDG 16
         title_label = ctk.CTkLabel(
             main_frame, text="IncidentX",
-            font=ctk.CTkFont(size=32, weight="bold")
+            font=ctk.CTkFont(family="Times New Roman", size=36, weight="bold")
         )
         title_label.pack(pady=(40, 5))
 
         subtitle_Label = ctk.CTkLabel(
             main_frame,
             text="Learning Environment Monitor",
-            font=ctk.CTkFont(size=14)
+            font=ctk.CTkFont(family="Times New Roman", size=18)
         )
         subtitle_Label.pack(pady=(0, 5))
 
         # SDG 16 Banner Badge
         sdg16_Label = ctk.CTkLabel(main_frame,
                                    text="⚖️ Aligned with SDG: 16\nPeace, Justice and Strong Institutions",
-                                   font=ctk.CTkFont(size=12),
+                                   font=ctk.CTkFont(family="Times New Roman", size=16),
                                    text_color="#1F8FFF")
         sdg16_Label.pack(pady=(5, 30))
 
@@ -107,27 +107,27 @@ class IncidentXAppLoginWindow:
 
         ctk.CTkLabel(
             form_frame, text="Login to your account",
-            font=ctk.CTkFont(size=18, weight="bold")
+            font=ctk.CTkFont(family="Times New Roman", size=22, weight="bold")
         ).pack(pady=(30, 30))
 
         # Username entry
         self.username_entry = ctk.CTkEntry(
             form_frame, placeholder_text="Username", width=300,
-            height=45, font=ctk.CTkFont(size=14)
+            height=45, font=ctk.CTkFont(family="Times New Roman", size=18)
         )
         self.username_entry.pack(pady=(0, 30), padx=20)
 
         # Password Entry
         self.password_entry = ctk.CTkEntry(
             form_frame, placeholder_text="Password", width=300, show="*",
-            height=45, font=ctk.CTkFont(size=14)
+            height=45, font=ctk.CTkFont(family="Times New Roman", size=18)
         )
         self.password_entry.pack(pady=(0, 30), padx=20)
         
         # Login Button
         login_btn = ctk.CTkButton(
             form_frame, text="LOGIN", width=300, height=45,
-            command=self.login, font=ctk.CTkFont(size=14, weight="bold"),
+            command=self.login, font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold"),
             fg_color="#2ecc71", hover_color="#27ae60"   
         )
         login_btn.pack(pady=(0, 15), padx=20)
@@ -135,7 +135,7 @@ class IncidentXAppLoginWindow:
         # Register Button
         register_btn =ctk.CTkButton(
             form_frame, text="Register New User", command=self.open_register_window,
-            width=300, height=40, font=ctk.CTkFont(size=13, weight="bold"),
+            width=300, height=40, font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold"),
             fg_color="transparent", border_width=2, border_color="#3498db"
         )
         register_btn.pack(pady=(0, 30), padx=20)
@@ -218,31 +218,31 @@ class RegisterWindow:
         main_frame.pack(fill="both", expand=True)
 
         # Title Label
-        title_Label = ctk.CTkLabel(main_frame, text="📝 Register New User", font=ctk.CTkFont(size=28, weight="bold"))
+        title_Label = ctk.CTkLabel(main_frame, text="📝 Register New User", font=ctk.CTkFont(family="Times New Roman", size=32, weight="bold"))
         title_Label.pack(pady=(30, 30))    
 
         # Full Name Entry
-        self.fullname_entry = ctk.CTkEntry(main_frame, placeholder_text="Full Name", width=350, height=45, font=ctk.CTkFont(size=14))
+        self.fullname_entry = ctk.CTkEntry(main_frame, placeholder_text="Full Name", width=350, height=45, font=ctk.CTkFont(family="Times New Roman", size=18))
         self.fullname_entry.pack(pady=(0, 15), padx=40)
 
         # Username Entry
-        self.username_entry = ctk.CTkEntry(main_frame, placeholder_text="Username", width=350, height=45, font=ctk.CTkFont(size=14))
+        self.username_entry = ctk.CTkEntry(main_frame, placeholder_text="Username", width=350, height=45, font=ctk.CTkFont(family="Times New Roman", size=18))
         self.username_entry.pack(pady=(0, 15), padx=40)
 
         # Password Entry
-        self.password_entry = ctk.CTkEntry(main_frame, placeholder_text="Password", show="*", width=350, height=45, font=ctk.CTkFont(size=14))
+        self.password_entry = ctk.CTkEntry(main_frame, placeholder_text="Password", show="*", width=350, height=45, font=ctk.CTkFont(family = "Times New Roman", size=18))
         self.password_entry.pack(pady=(0, 15), padx=40)
 
         # Confirm Password Entry
-        self.confirm_password_entry = ctk.CTkEntry(main_frame, placeholder_text="Confirm Password", show="*", width=350, height=45, font=ctk.CTkFont(size=14))
+        self.confirm_password_entry = ctk.CTkEntry(main_frame, placeholder_text="Confirm Password", show="*", width=350, height=45, font=ctk.CTkFont(family="Times New Roman", size=18))
         self.confirm_password_entry.pack(pady=(0, 30), padx=40)
 
         # Register Button 
-        register_btn = ctk.CTkButton(main_frame, text="REGISTER", width=350, height=45, command=self.register, font=ctk.CTkFont(size=15, weight="bold"), fg_color="#2ecc71", hover_color="#27ae60")
+        register_btn = ctk.CTkButton(main_frame, text="REGISTER", width=350, height=45, command=self.register, font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), fg_color="#2ecc71", hover_color="#27ae60")
         register_btn.pack(pady=(0, 15), padx=40)
 
         # Cancel Button
-        cancel_btn = ctk.CTkButton(main_frame, text="CANCEL", width=350, height=45, command=self.window.destroy, font=ctk.CTkFont(size=13, weight="bold"), fg_color="transparent", border_width=2, border_color="#95a5a6")
+        cancel_btn = ctk.CTkButton(main_frame, text="CANCEL", width=350, height=45, command=self.window.destroy, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold"), fg_color="transparent", border_width=2, border_color="#95a5a6")
         cancel_btn.pack(pady=(0, 30), padx=40)
 
     def register(self):
@@ -340,16 +340,16 @@ class IncidentXApp:
         left_frame = ctk.CTkFrame(header_frame, fg_color="transparent")
         left_frame.pack(side="left", padx=20, fill="y")
 
-        ctk.CTkLabel(left_frame, text="⚖️ UN SDG 16", font=ctk.CTkFont(size=20, weight="bold"), text_color="white").pack(anchor="w", pady=(12, 0))
-        ctk.CTkLabel(left_frame, text="Peace, Justice and Strong Institutions", font=ctk.CTkFont(size=13), text_color="white").pack(anchor="w")
+        ctk.CTkLabel(left_frame, text="Incident X", font=ctk.CTkFont(family="Times New Roman", size=24, weight="bold"), text_color="white").pack(anchor="w", pady=(12, 0))
+        ctk.CTkLabel(left_frame, text="Aligned to the SDG 16", font=ctk.CTkFont(family="Times New Roman", size=17), text_color="white").pack(anchor="w")
 
         # Right side - Mission Statement
         right_frame = ctk.CTkFrame(header_frame, fg_color="transparent")
         right_frame.pack(side="right", padx=20, fill="y")
 
-        ctk.CTkLabel(right_frame, text="Our Mission: Building Safe and Inclusive Learning Environments", font=ctk.CTkFont(size=14, weight="bold"), text_color="white").pack(anchor="e", pady=(12, 0))
+        ctk.CTkLabel(right_frame, text="Our Mission: Building Safe and Inclusive Learning Environments", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold"), text_color="white").pack(anchor="e", pady=(12, 0))
 
-        ctk.CTkLabel(right_frame, text="Promoting transparency, accountability, and well-being for all members of the educational community.", font=ctk.CTkFont(size=11), text_color="white").pack(anchor="e")
+        ctk.CTkLabel(right_frame, text="Promoting transparency, accountability, and well-being for all members of the educational community.", font=ctk.CTkFont(family="Times New Roman", size=15), text_color="white").pack(anchor="e")
 
     def create_report_incident_tab(self):
         # Create the incident report tab
@@ -360,7 +360,7 @@ class IncidentXApp:
         scroll_frame.pack(fill="both", expand=True, padx=20, pady=20)
 
         # Title
-        title_label = ctk.CTkLabel(scroll_frame, text="Report New Incident", font=ctk.CTkFont(size=28, weight="bold"))   
+        title_label = ctk.CTkLabel(scroll_frame, text="Report New Incident", font=ctk.CTkFont(family="Times New Roman", size=32, weight="bold"))   
         title_label.pack(pady=(10, 30))
 
         # Form frame
@@ -368,53 +368,53 @@ class IncidentXApp:
         form_frame.pack(fill="x", padx=40, pady=10)
 
         # Person Type
-        ctk.CTkLabel(form_frame, text="Person Type", font=ctk.CTkFont(size=14, weight="bold")).grid(row=0, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Person Type", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=0, column=0, sticky="w", padx=20, pady=15)
 
         self.person_type_var = ctk.StringVar(value="Student")
         person_frame = ctk.CTkFrame(form_frame, fg_color="transparent")
         person_frame.grid(row=0, column=1, sticky="w", padx=20, pady=15)
 
-        ctk.CTkRadioButton(person_frame, text="Student", variable=self.person_type_var, value="Student", font=ctk.CTkFont(size=13)).pack(side="left", padx=10)
-        ctk.CTkRadioButton(person_frame, text="Teacher", variable=self.person_type_var, value="Teacher", font=ctk.CTkFont(size=13)).pack(side="left", padx=10)
+        ctk.CTkRadioButton(person_frame, text="Student", variable=self.person_type_var, value="Student", font=ctk.CTkFont(family="Times New Roman", size=17)).pack(side="left", padx=10)
+        ctk.CTkRadioButton(person_frame, text="Teacher", variable=self.person_type_var, value="Teacher", font=ctk.CTkFont(family="Times New Roman", size=17)).pack(side="left", padx=10)
 
         # Name Label and Entry
-        ctk.CTkLabel(form_frame, text="Name: ", font=ctk.CTkFont(size=14, weight="bold")).grid(row=1, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Name: ", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=1, column=0, sticky="w", padx=20, pady=15)
 
-        self.name_entry = ctk.CTkEntry(form_frame, width=400, height=40, font=ctk.CTkFont(size=13))
+        self.name_entry = ctk.CTkEntry(form_frame, width=400, height=40, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.name_entry.grid(row=1, column=1, sticky="w", padx=20, pady=15)
 
         # ID Number Label and Entry
-        ctk.CTkLabel(form_frame, text="ID Number: ", font=ctk.CTkFont(size=14, weight="bold")).grid(row=2, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="ID Number: ", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=2, column=0, sticky="w", padx=20, pady=15)
 
-        self.id_entry = ctk.CTkEntry(form_frame, width=400, height=40, font=ctk.CTkFont(size=13))
+        self.id_entry = ctk.CTkEntry(form_frame, width=400, height=40, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.id_entry.grid(row=2, column=1, sticky="w", padx=20, pady=15)
 
         # Incident Type 
-        ctk.CTkLabel(form_frame, text="Incident Type", font=ctk.CTkFont(size=14, weight="bold")).grid(row=3, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Incident Type", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=3, column=0, sticky="w", padx=20, pady=15)
 
         self.incident_type_var = ctk.StringVar(value="Breakdown")
-        incident_menu = ctk.CTkOptionMenu(form_frame, values=["Breakdown", "Bullying", "Vandalising", "Harassment", "Theft", "Other"], variable=self.incident_type_var, width=400, height=40, font=ctk.CTkFont(size=13))
+        incident_menu = ctk.CTkOptionMenu(form_frame, values=["Breakdown", "Bullying", "Vandalising", "Harassment", "Theft", "Other"], variable=self.incident_type_var, width=400, height=40, font=ctk.CTkFont(family="Times New Roman", size=17))
         incident_menu.grid(row=3, column=1, sticky="w", padx=20, pady=15)
 
         # Severity
-        ctk.CTkLabel(form_frame, text="Severity", font=ctk.CTkFont(size=14, weight="bold")).grid(row=4, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Severity", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=4, column=0, sticky="w", padx=20, pady=15)
 
         self.severity_var = ctk.StringVar(value="Low")
-        severity_menu = ctk.CTkOptionMenu(form_frame, values=["Low", "Medium", "High", "Critical"], variable=self.severity_var, width=400, height=40, font=ctk.CTkFont(size=13))
+        severity_menu = ctk.CTkOptionMenu(form_frame, values=["Low", "Medium", "High", "Critical"], variable=self.severity_var, width=400, height=40, font=ctk.CTkFont(family="Times New Roman", size=17))
         severity_menu.grid(row=4, column=1, sticky="w", padx=20, pady=15)
 
         # Description Label and Textbox
-        ctk.CTkLabel(form_frame, text="Description:", font=ctk.CTkFont(size=14, weight="bold")).grid(row=5, column=0, sticky="nw", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Description:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=5, column=0, sticky="nw", padx=20, pady=15)
 
-        self.description_textbox = ctk.CTkTextbox(form_frame, width=400, height=150, font=ctk.CTkFont(size=13))
+        self.description_textbox = ctk.CTkTextbox(form_frame, width=400, height=150, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.description_textbox.grid(row=5, column=1, sticky="w", padx=20, pady=15)
 
         # Button's in the Incident Report Tab
         button_frame = ctk.CTkFrame(form_frame, fg_color="transparent")
         button_frame.grid(row=6, column=0, columnspan=2, pady=30)
 
-        ctk.CTkButton(button_frame, text="SUBMIT REPORT", width=180, height=45, command=self.submit_incident_report, font=ctk.CTkFont(size=15, weight="bold"), fg_color="#2ecc71", hover_color="#27ae60").pack(side="left", padx=10)
-        ctk.CTkButton(button_frame, text="CLEAR FORM", width=180, height=45, font=ctk.CTkFont(size=15, weight="bold"), fg_color="#95a5a6", hover_color="#7f8c8d", command=self.clear_incident_form).pack(side="left", padx=10)
+        ctk.CTkButton(button_frame, text="SUBMIT REPORT", width=180, height=45, command=self.submit_incident_report, font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), fg_color="#2ecc71", hover_color="#27ae60").pack(side="left", padx=10)
+        ctk.CTkButton(button_frame, text="CLEAR FORM", width=180, height=45, font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), fg_color="#95a5a6", hover_color="#7f8c8d", command=self.clear_incident_form).pack(side="left", padx=10)
     
     def create_view_records_tab(self):
         # Create the view records tab
@@ -424,23 +424,23 @@ class IncidentXApp:
         header_frame = ctk.CTkFrame(tab, fg_color="transparent")
         header_frame.pack(fill="x", padx=20, pady=(20, 10))
 
-        ctk.CTkLabel(header_frame, text="Incident Records", font=ctk.CTkFont(size=28, weight="bold")).pack(side="left", padx=10)
-        self.stats_label = ctk.CTkLabel(header_frame, text="Total Incidents: 0", font=ctk.CTkFont(size=14, weight="bold"))
+        ctk.CTkLabel(header_frame, text="Incident Records", font=ctk.CTkFont(family="Times New Roman", size=32, weight="bold")).pack(side="left", padx=10)
+        self.stats_label = ctk.CTkLabel(header_frame, text="Total Incidents: 0", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold"))
         self.stats_label.pack(side="right", padx=10)
 
         # Filter frame
         filter_frame = ctk.CTkFrame(tab)
         filter_frame.pack(fill="x", padx=20, pady=(0, 10))
 
-        ctk.CTkLabel(filter_frame, text="Filter by:", font=ctk.CTkFont(size=13, weight="bold")).pack(side="left", padx=10)
+        ctk.CTkLabel(filter_frame, text="Filter by:", font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold")).pack(side="left", padx=10)
 
         self.filter_var = ctk.StringVar(value="All")
-        filter_menu = ctk.CTkOptionMenu(filter_frame, values=["All", "Student", "Teacher", "Breakdown", "Bullying", "Vandalising", "Harassment", "Theft", "Other"], variable=self.filter_var, command=lambda x: self.refresh_records(), width=150, font=ctk.CTkFont(size=13))
+        filter_menu = ctk.CTkOptionMenu(filter_frame, values=["All", "Student", "Teacher", "Breakdown", "Bullying", "Vandalising", "Harassment", "Theft", "Other"], variable=self.filter_var, command=lambda x: self.refresh_records(), width=150, font=ctk.CTkFont(family="Times New Roman", size=17))
         filter_menu.pack(side="left", padx=5)
 
-        ctk.CTkButton(filter_frame, text="🔄 Refresh", command=self.refresh_records, width=120, font=ctk.CTkFont(size=13, weight="bold"), fg_color="#3498db", hover_color="#2980b9").pack(side="left", padx=5)
-        ctk.CTkButton(filter_frame, text="✏️ Edit", command=self.edit_incident, width=100, font=ctk.CTkFont(size=13, weight="bold"), fg_color="#f39c12", hover_color="#e67e22").pack(side="right", padx=5)
-        ctk.CTkButton(filter_frame, text="🗑️ Delete", command=self.delete_incident, width=100, font=ctk.CTkFont(size=13, weight="bold"), fg_color="#e74c3c", hover_color="#c0392b").pack(side="right", padx=5)
+        ctk.CTkButton(filter_frame, text="🔄 Refresh", command=self.refresh_records, width=120, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold"), fg_color="#3498db", hover_color="#2980b9").pack(side="left", padx=5)
+        ctk.CTkButton(filter_frame, text="✏️ Edit", command=self.edit_incident, width=100, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold"), fg_color="#f39c12", hover_color="#e67e22").pack(side="right", padx=5)
+        ctk.CTkButton(filter_frame, text="🗑️ Delete", command=self.delete_incident, width=100, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold"), fg_color="#e74c3c", hover_color="#c0392b").pack(side="right", padx=5)
 
         # Records display frame
         records_frame = ctk.CTkScrollableFrame(tab, label_text="")
@@ -452,9 +452,9 @@ class IncidentXApp:
         details_frame = ctk.CTkFrame(tab)
         details_frame.pack(fill="x", padx=20, pady=(10, 20))
 
-        ctk.CTkLabel(details_frame, text="Incident Details", font=ctk.CTkFont(size=16, weight="bold")).pack(anchor="w", padx=15, pady=(10, 5))
+        ctk.CTkLabel(details_frame, text="Incident Details", font=ctk.CTkFont(family="Times New Roman", size=20, weight="bold")).pack(anchor="w", padx=15, pady=(10, 5))
 
-        self.details_text = ctk.CTkTextbox(details_frame, height=100, font=ctk.CTkFont(size=13))
+        self.details_text = ctk.CTkTextbox(details_frame, height=100, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.details_text.pack(fill="x", padx=15, pady=(0, 15))
 
         self.refresh_records()
@@ -467,25 +467,25 @@ class IncidentXApp:
         title_frame = ctk.CTkFrame(tab, fg_color=("#f39c12", "#d35400"))
         title_frame.pack(fill="x", pady=(20, 10))
 
-        ctk.CTkLabel(title_frame, text="Motivation & Positive Vibes Corner", font=ctk.CTkFont(size=26, weight="bold"), text_color="white").pack(pady=20)
+        ctk.CTkLabel(title_frame, text="Motivation & Positive Vibes Corner", font=ctk.CTkFont(family="Times New Roman", size= 30, weight="bold"), text_color="white").pack(pady=20)
 
         # Add quote display frame
         add_frame = ctk.CTkFrame(tab)
         add_frame.pack(fill="x", padx=20, pady=10)
 
-        ctk.CTkLabel(add_frame, text="Add New Motivational Quote", font=ctk.CTkFont(size=18, weight="bold")).pack(pady=(20, 15))
+        ctk.CTkLabel(add_frame, text="Add New Motivational Quote", font=ctk.CTkFont(family="Times New Roman", size=22, weight="bold")).pack(pady=(20, 15))
 
-        ctk.CTkLabel(add_frame, text="Enter your motivational quote:", font=ctk.CTkFont(size=13)).pack(anchor="w", padx=20)
+        ctk.CTkLabel(add_frame, text="Enter your motivational quote:", font=ctk.CTkFont(family="Times New Roman", size=17)).pack(anchor="w", padx=20)
 
-        self.quote_textbox = ctk.CTkTextbox(add_frame, height=100, font=ctk.CTkFont(size=13))
+        self.quote_textbox = ctk.CTkTextbox(add_frame, height=100, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.quote_textbox.pack(fill="x", padx=20, pady=(5, 15))
 
         # Author Label and Entry
-        ctk.CTkLabel(add_frame, text="Author (optional):", font=ctk.CTkFont(size=13)).pack(anchor="w", padx=20)
-        self.author_entry = ctk.CTkEntry(add_frame, height=40, font=ctk.CTkFont(size=13))
+        ctk.CTkLabel(add_frame, text="Author (optional):", font=ctk.CTkFont(family="Times New Roman", size=17)).pack(anchor="w", padx=20)
+        self.author_entry = ctk.CTkEntry(add_frame, height=40, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.author_entry.pack(fill="x", padx=20, pady=(5, 20))
 
-        ctk.CTkButton(add_frame, text="✨ Add Quote", command=self.add_quote, width=200, height=45, font=ctk.CTkFont(size=15, weight="bold"), fg_color="#f39c12", hover_color="#e67e22").pack(pady=(0, 25))
+        ctk.CTkButton(add_frame, text="✨ Add Quote", command=self.add_quote, width=200, height=45, font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), fg_color="#f39c12", hover_color="#e67e22").pack(pady=(0, 25))
 
         # Display quotes frame
         display_frame = ctk.CTkFrame(tab)
@@ -494,9 +494,9 @@ class IncidentXApp:
         header_frame = ctk.CTkFrame(display_frame, fg_color="transparent")
         header_frame.pack(fill="x", pady=(15, 10), padx=15)
     
-        ctk.CTkLabel(header_frame, text="Motivational Quotes Collection", font=ctk.CTkFont(size=18, weight="bold")).pack(side="left")
+        ctk.CTkLabel(header_frame, text="Motivational Quotes Collection", font=ctk.CTkFont(family="Times New Roman", size=22, weight="bold")).pack(side="left")
 
-        self.quote_count_label = ctk.CTkLabel(header_frame, text="Total Quotes: 0", font=ctk.CTkFont(size=14, weight="bold"))
+        self.quote_count_label = ctk.CTkLabel(header_frame, text="Total Quotes: 0", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold"))
         self.quote_count_label.pack(side="right")
 
         # Quotes container
@@ -507,9 +507,9 @@ class IncidentXApp:
         btn_frame = ctk.CTkFrame(display_frame, fg_color="transparent")
         btn_frame.pack(fill="x", padx=15, pady=(10, 15))
 
-        ctk.CTkButton(btn_frame, text="✏️ Edit Selected", command=self.edit_quote, width=140, font=ctk.CTkFont(size=13, weight="bold"), fg_color="#f39c12", hover_color="#e67e22").pack(side="left", padx=5)
-        ctk.CTkButton(btn_frame, text="🗑️ Delete Selected", command=self.delete_quote, width=140, font=ctk.CTkFont(size=13, weight="bold"), fg_color="#e74c3c", hover_color="#c0392b").pack(side="left", padx=5)
-        ctk.CTkButton(btn_frame, text="🎲 Random Quote", command=self.show_random_quote, width=140, font=ctk.CTkFont(size=13, weight="bold"), fg_color="#9b59b6", hover_color="#8e44ad").pack(side="left", padx=5)
+        ctk.CTkButton(btn_frame, text="✏️ Edit Selected", command=self.edit_quote, width=140, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold"), fg_color="#f39c12", hover_color="#e67e22").pack(side="left", padx=5)
+        ctk.CTkButton(btn_frame, text="🗑️ Delete Selected", command=self.delete_quote, width=140, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold"), fg_color="#e74c3c", hover_color="#c0392b").pack(side="left", padx=5)
+        ctk.CTkButton(btn_frame, text="🎲 Random Quote", command=self.show_random_quote, width=140, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold"), fg_color="#9b59b6", hover_color="#8e44ad").pack(side="left", padx=5)
 
         self.refresh_quotes()
 
@@ -604,18 +604,18 @@ class IncidentXApp:
         # Header frame
         header_frame = ctk.CTkFrame(card, fg_color=severity_color)
         header_frame.pack(fill="x")
-        ctk.CTkLabel(header_frame, text=f"ID: {incident[0]} | {incident[5]} - {incident[6]} Severity", font=ctk.CTkFont(size=14, weight="bold"), text_color="white").pack(side="left", padx=15, pady=10)
-        ctk.CTkLabel(header_frame, text=incident[1], font=ctk.CTkFont(size=12), text_color="white").pack(side="right", padx=15, pady=10)
+        ctk.CTkLabel(header_frame, text=f"ID: {incident[0]} | {incident[5]} - {incident[6]} Severity", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold"), text_color="white").pack(side="left", padx=15, pady=10)
+        ctk.CTkLabel(header_frame, text=incident[1], font=ctk.CTkFont(family="Times New Roman", size=16), text_color="white").pack(side="right", padx=15, pady=10)
 
         # Content
         content_frame = ctk.CTkFrame(card, fg_color="transparent")
         content_frame.pack(fill="x", padx=15, pady=10)
 
         info_text = f"👤 {incident[3]} ({incident[2]}) | ID: {incident[4]}"
-        ctk.CTkLabel(content_frame, text=info_text, font=ctk.CTkFont(size=13), anchor="w").pack(fill="x")
+        ctk.CTkLabel(content_frame, text=info_text, font=ctk.CTkFont(family="Times New Roman", size=17), anchor="w").pack(fill="x")
 
         # Button to show details
-        ctk.CTkButton(card, text="View Details", command=lambda: self.show_incident_details_by_id(incident[0]), width=120, height=30, font=ctk.CTkFont(size=12)).pack(side="right", padx=15, pady=(0, 10))
+        ctk.CTkButton(card, text="View Details", command=lambda: self.show_incident_details_by_id(incident[0]), width=120, height=30, font=ctk.CTkFont(family="Times New Roman", size=16)).pack(side="right", padx=15, pady=(0, 10))
 
         # Store incident ID in card for selection
         card.incident_id = incident[0]
@@ -752,7 +752,7 @@ class IncidentXApp:
         content_frame.pack(fill="both", expand=True)
 
         # Quote text
-        quote_label = ctk.CTkLabel(content_frame, text=f'"{quote[1]}"', font=ctk.CTkFont(size=14), wraplength=750, anchor="w", justify="left")
+        quote_label = ctk.CTkLabel(content_frame, text=f'"{quote[1]}"', font=ctk.CTkFont(family="Times New Roman", size=18), wraplength=750, anchor="w", justify="left")
         quote_label.pack(fill="x", padx=20, pady=(15, 5))
 
         # Bottom frame with author and buttons
@@ -760,7 +760,7 @@ class IncidentXApp:
         bottom_frame.pack(fill="x", padx=20, pady=(0, 15))
 
         # Author on the left
-        author_label = ctk.CTkLabel(bottom_frame, text=f"- {quote[2]}", font=ctk.CTkFont(size=12, slant="italic"))
+        author_label = ctk.CTkLabel(bottom_frame, text=f"- {quote[2]}", font=ctk.CTkFont(family="Times New Roman", size=16, slant="italic"))
         author_label.pack(side="left")
 
         # Buttons on the right 
@@ -768,11 +768,11 @@ class IncidentXApp:
         button_frame.pack(side="right")
 
         # Edit button 
-        edit_btn = ctk.CTkButton(button_frame, text="✏️", command=lambda: self.edit_quote_by_id(quote[0]), width=60, font=ctk.CTkFont(size=12), fg_color="#f39c12", hover_color="#e67e22")
+        edit_btn = ctk.CTkButton(button_frame, text="✏️ Edit Quote", command=lambda: self.edit_quote_by_id(quote[0]), width=60, font=ctk.CTkFont(family="Times New Roman", size=16), fg_color="#f39c12", hover_color="#e67e22")
         edit_btn.pack(side="left", padx=3)
 
         # Delete button
-        delete_btn = ctk.CTkButton(button_frame, text="🗑️", command=lambda: self.delete_quote_by_id(quote[0]), width=60, font=ctk.CTkFont(size=12), fg_color="#e74c3c", hover_color="#c0392b")
+        delete_btn = ctk.CTkButton(button_frame, text="🗑️ Delete Quote", command=lambda: self.delete_quote_by_id(quote[0]), width=60, font=ctk.CTkFont(family="Times New Roman", size=16), fg_color="#e74c3c", hover_color="#c0392b")
         delete_btn.pack(side="left", padx=3)
 
         # Store quote ID 
@@ -891,13 +891,13 @@ class IncidentXApp:
         title_frame = ctk.CTkFrame(scroll_frame, fg_color=("#1F8FFF", "#1565C0"))
         title_frame.pack(fill="x", pady=(10, 20))
 
-        ctk.CTkLabel(title_frame, text="🎯 SDG 16: Peace, Justice and Strong Institutions", font=ctk.CTkFont(size=26, weight="bold"), text_color="white").pack(pady=20)
+        ctk.CTkLabel(title_frame, text="🎯 SDG 16: Peace, Justice and Strong Institutions", font=ctk.CTkFont(family="Times New Roman", size=30, weight="bold"), text_color="white").pack(pady=20)
 
         # SDG 16 Overview
         overview_frame = ctk.CTkFrame(scroll_frame)
         overview_frame.pack(fill="x", pady=10)
 
-        ctk.CTkLabel(overview_frame, text="About SDG 16", font=ctk.CTkFont(size=20, weight="bold")).pack(anchor="w", padx=20, pady=(20, 10))
+        ctk.CTkLabel(overview_frame, text="About SDG 16", font=ctk.CTkFont(family="Times New Roman", size=24, weight="bold")).pack(anchor="w", padx=20, pady=(20, 10))
 
         overview_text = """SDG 16 aims to promote peaceful and inclusive societies for sustainable development, provide access to justice for all, and build effective, accountable, and inclusive institutions at all levels. 
                          
@@ -908,13 +908,13 @@ In the context of educational institutions, SDG 16 focuses on:
 • Promoting the rule of law and transparent, accountable institutional practices
 • Developing responsive, inclusive decision-making processes"""
         
-        ctk.CTkLabel(overview_frame, text=overview_text, font=ctk.CTkFont(size=13), justify="left", wraplength=1000).pack(anchor="w", padx=20, pady=(0, 20))
+        ctk.CTkLabel(overview_frame, text=overview_text, font=ctk.CTkFont(family="Times New Roman", size=17), justify="left", wraplength=1000).pack(anchor="w", padx=20, pady=(0, 20))
 
         # How the IncidentX App Align (Alignment Section Frame)
         alignment_frame = ctk.CTkFrame(scroll_frame)
         alignment_frame.pack(fill="x", pady=10)
 
-        ctk.CTkLabel(alignment_frame, text="How IncidentX Supports SDG 16", font=ctk.CTkFont(size=20, weight="bold")).pack(anchor="w", padx=20, pady=(20, 10))
+        ctk.CTkLabel(alignment_frame, text="How IncidentX Supports SDG 16", font=ctk.CTkFont(family="Times New Roman", size=24, weight="bold")).pack(anchor="w", padx=20, pady=(20, 10))
 
         # Create alignment cards
         alignments = [
@@ -958,16 +958,16 @@ In the context of educational institutions, SDG 16 focuses on:
             header_frame = ctk.CTkFrame(card, fg_color=("#3498db", "#2980b9"))
             header_frame.pack(fill="x")
 
-            ctk.CTkLabel(header_frame, text=f"{alignment['icon']} {alignment['target']}", font=ctk.CTkFont(size=15, weight="bold"), text_color="white").pack(side="left", padx=15, pady=12)
+            ctk.CTkLabel(header_frame, text=f"{alignment['icon']} {alignment['target']}", font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), text_color="white").pack(side="left", padx=15, pady=12)
 
             # Description
-            ctk.CTkLabel(card, text=alignment['description'], font=ctk.CTkFont(size=13), wraplength=900, justify="left").pack(anchor="w", padx=15, pady=15)
+            ctk.CTkLabel(card, text=alignment['description'], font=ctk.CTkFont(family="Times New Roman", size=17), wraplength=900, justify="left").pack(anchor="w", padx=15, pady=15)
 
         # Statistics Section
         stats_frame = ctk.CTkFrame(scroll_frame)
         stats_frame.pack(fill="x", pady=20)
 
-        ctk.CTkLabel(stats_frame, text="Impact Statistics", font=ctk.CTkFont(size=20, weight="bold")).pack(anchor="w", pady=(20, 15), padx=20)
+        ctk.CTkLabel(stats_frame, text="Impact Statistics", font=ctk.CTkFont(family="Times New Roman", size=24, weight="bold")).pack(anchor="w", pady=(20, 15), padx=20)
 
         # Get statistics from the database
         self.display_sdg_statistics(stats_frame)
@@ -979,7 +979,7 @@ In the context of educational institutions, SDG 16 focuses on:
         action_frame = ctk.CTkFrame(scroll_frame)
         action_frame.pack(fill="x", pady=10)
 
-        ctk.CTkLabel(action_frame, text="SDG 16 Action Items for Educational Institutions", font=ctk.CTkFont(size=20, weight="bold")).pack(anchor="w", padx=20, pady=(20, 10))
+        ctk.CTkLabel(action_frame, text="SDG 16 Action Items for Educational Institutions", font=ctk.CTkFont(family="Times New Roman", size=24, weight="bold")).pack(anchor="w", padx=20, pady=(20, 10))
 
         actions = [
             "✓ Establish clear anti-bullying, anti-harassment and anti-violence policies",
@@ -993,7 +993,7 @@ In the context of educational institutions, SDG 16 focuses on:
         ]
 
         for action in actions:
-            ctk.CTkLabel(action_frame, text=action, font=ctk.CTkFont(size=13), anchor="w").pack(anchor="w", padx=40, pady=5)
+            ctk.CTkLabel(action_frame, text=action, font=ctk.CTkFont(family="Times New Roman", size=17), anchor="w").pack(anchor="w", padx=40, pady=5)
 
         # Spacer
         ctk.CTkLabel(action_frame, text="").pack(pady=20)
@@ -1039,18 +1039,18 @@ In the context of educational institutions, SDG 16 focuses on:
                 breakdown_frame = ctk.CTkFrame(parent_frame)
                 breakdown_frame.pack(fill="x", padx=20, pady=10)
 
-                ctk.CTkLabel(breakdown_frame, text="Incident Breakdown by Type", font=ctk.CTkFont(size=15, weight="bold")).pack(anchor="w", padx=15, pady=(15, 10))
+                ctk.CTkLabel(breakdown_frame, text="Incident Breakdown by Type", font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold")).pack(anchor="w", padx=15, pady=(15, 10))
                 
                 for incident_type, count in incidents_by_type:
                     type_frame = ctk.CTkFrame(breakdown_frame, fg_color="transparent")
                     type_frame.pack(fill="x", padx=15, pady=2)
                     
-                    ctk.CTkLabel(type_frame, text=f"• {incident_type}:", font=ctk.CTkFont(size=13)).pack(side="left")
-                    ctk.CTkLabel(type_frame, text=f"{count} cases ({round(count/total_incidents*100, 1)}%)" if total_incidents > 0 else "0 cases", font=ctk.CTkFont(size=13, weight="bold")).pack(side="left", padx=10)
+                    ctk.CTkLabel(type_frame, text=f"• {incident_type}:", font=ctk.CTkFont(family="Times New Roman", size=17)).pack(side="left")
+                    ctk.CTkLabel(type_frame, text=f"{count} cases ({round(count/total_incidents*100, 1)}%)" if total_incidents > 0 else "0 cases", font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold")).pack(side="left", padx=10)
 
                 ctk.CTkLabel(breakdown_frame, text="").pack(pady=10)
         except sqlite3.Error as e:
-            ctk.CTkLabel(parent_frame, text=f"Unable to fetch statistics: {e}", font=ctk.CTkFont(size=12), text_color="red").pack(padx=20, pady=10)
+            ctk.CTkLabel(parent_frame, text=f"Unable to fetch statistics: {e}", font=ctk.CTkFont(family="Times New Roman", size=16), text_color="red").pack(padx=20, pady=10)
     
     def update_sdg_statistics(self):
         """Update the SDG statistics display"""
@@ -1061,7 +1061,7 @@ In the context of educational institutions, SDG 16 focuses on:
                 
             # Recreate the statistics display with updated data
             ctk.CTkLabel(
-                self.sdg_stats_frame, text="Impact Statistics", font=ctk.CTkFont(size=20, weight="bold")
+                self.sdg_stats_frame, text="Impact Statistics", font=ctk.CTkFont(family="Times New Roman", size=24, weight="bold")
             ).pack(anchor="w", padx=20, pady=(20, 15))
             self.display_sdg_statistics(self.sdg_stats_frame)
     
@@ -1072,9 +1072,9 @@ In the context of educational institutions, SDG 16 focuses on:
 
         parent.grid_columnconfigure(column, weight=1)
 
-        ctk.CTkLabel(card, text=title, font=ctk.CTkFont(size=13, weight="bold")).pack(pady=(15, 5)) 
-        ctk.CTkLabel(card, text=value, font=ctk.CTkFont(size=32, weight="bold"), text_color=("#1F8FFF", "#3498db")).pack(pady=5)
-        ctk.CTkLabel(card, text=description, font=ctk.CTkFont(size=11), text_color="gray").pack(pady=(0, 15))
+        ctk.CTkLabel(card, text=title, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold")).pack(pady=(15, 5)) 
+        ctk.CTkLabel(card, text=value, font=ctk.CTkFont(family="Times New Roman", size=36, weight="bold"), text_color=("#1F8FFF", "#3498db")).pack(pady=5)
+        ctk.CTkLabel(card, text=description, font=ctk.CTkFont(family="Times New Roman", size=15), text_color="gray").pack(pady=(0, 15))
 
 
 # Edit Incident Class Window
@@ -1102,14 +1102,14 @@ class EditIncidentWindow:
         scroll_frame.pack(fill="both", expand=True, padx=20, pady=20)
 
         # Title 
-        ctk.CTkLabel(scroll_frame, text=f"✏️ Edit Incident Report (ID: {self.incident[0]})", font=ctk.CTkFont(size=24, weight="bold")).pack(pady=(10, 30))
+        ctk.CTkLabel(scroll_frame, text=f"✏️ Edit Incident Report (ID: {self.incident[0]})", font=ctk.CTkFont(family="Times New Roman", size=28, weight="bold")).pack(pady=(10, 30))
 
         # Form Frame
         form_frame = ctk.CTkFrame(scroll_frame)
         form_frame.pack(fill="x", padx=20, pady=10)
         
         # Person Type
-        ctk.CTkLabel(form_frame, text="Person Type:", font=ctk.CTkFont(size=14, weight="bold")).grid(row=0, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Person Type:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=0, column=0, sticky="w", padx=20, pady=15)
 
         self.person_type_var = ctk.StringVar(value=self.incident[2])
         person_frame = ctk.CTkFrame(form_frame, fg_color="transparent")
@@ -1120,37 +1120,37 @@ class EditIncidentWindow:
         ctk.CTkRadioButton(person_frame, text="Teacher", variable=self.person_type_var, value="Teacher").pack(side="left", padx=10)
 
         # Name 
-        ctk.CTkLabel(form_frame, text="Name:", font=ctk.CTkFont(size=14, weight="bold")).grid(row=1, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Name:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=1, column=0, sticky="w", padx=20, pady=15)
 
-        self.name_entry = ctk.CTkEntry(form_frame, width=350, height=40, font=ctk.CTkFont(size=13))
+        self.name_entry = ctk.CTkEntry(form_frame, width=350, height=40, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.name_entry.insert(0, self.incident[3])
         self.name_entry.grid(row=1, column=1, sticky="w", padx=20, pady=15)
 
         # ID Number
-        ctk.CTkLabel(form_frame, text="ID Number:", font=ctk.CTkFont(size=14, weight="bold")).grid(row=2, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="ID Number:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=2, column=0, sticky="w", padx=20, pady=15)
 
-        self.id_entry = ctk.CTkEntry(form_frame, width=350, height=40, font=ctk.CTkFont(size=13))
+        self.id_entry = ctk.CTkEntry(form_frame, width=350, height=40, font=ctk.CTkFont(family="Times New Roman",size=17))
         self.id_entry.insert(0, self.incident[4])
         self.id_entry.grid(row=2, column=1, sticky="w", padx=20, pady=15)
 
         # Incident Type 
-        ctk.CTkLabel(form_frame, text="Incident Type:", font=ctk.CTkFont(size=14, weight="bold")).grid(row=3, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Incident Type:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=3, column=0, sticky="w", padx=20, pady=15)
 
         self.incident_type_var = ctk.StringVar(value=self.incident[5])
         incident_menu = ctk.CTkOptionMenu(form_frame, values=["Breakdown", "Bullying", "Vandalising", "Harassment", "Theft", "Other"], variable=self.incident_type_var, width=350, height=40)
         incident_menu.grid(row=3, column=1, sticky="w", padx=20, pady=15)
         
         # Severity
-        ctk.CTkLabel(form_frame, text="Severity Level:", font=ctk.CTkFont(size=14, weight="bold")).grid(row=4, column=0, sticky="w", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Severity Level:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=4, column=0, sticky="w", padx=20, pady=15)
 
         self.severity_var = ctk.StringVar(value=self.incident[6])
         severity_menu = ctk.CTkOptionMenu(form_frame, values=["Low", "Medium", "High", "Critical"], variable=self.severity_var, width=350, height=40)
         severity_menu.grid(row=4, column=1, sticky="w", padx=20, pady=15)
 
         # Description
-        ctk.CTkLabel(form_frame, text="Incident Description:", font=ctk.CTkFont(size=14, weight="bold")).grid(row=5, column=0, sticky="nw", padx=20, pady=15)
+        ctk.CTkLabel(form_frame, text="Incident Description:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).grid(row=5, column=0, sticky="nw", padx=20, pady=15)
 
-        self.description_textbox = ctk.CTkTextbox(form_frame, width=350, height=150, font=ctk.CTkFont(size=13))
+        self.description_textbox = ctk.CTkTextbox(form_frame, width=350, height=150, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.description_textbox.insert("1.0", self.incident[7])
         self.description_textbox.grid(row=5, column=1, sticky="w", padx=20, pady=15)
 
@@ -1158,9 +1158,9 @@ class EditIncidentWindow:
         button_frame = ctk.CTkFrame(form_frame, fg_color="transparent")
         button_frame.grid(row=6, column=0, columnspan=2, pady=30)
 
-        ctk.CTkButton(button_frame, text="💾 Save Changes", command=self.save_changes, width=180, height=45, font=ctk.CTkFont(size=15, weight="bold"), fg_color="#2ecc71", hover_color="#27ae60").pack(side="left", padx=10)
+        ctk.CTkButton(button_frame, text="💾 Save Changes", command=self.save_changes, width=180, height=45, font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), fg_color="#2ecc71", hover_color="#27ae60").pack(side="left", padx=10)
 
-        ctk.CTkButton(button_frame, text="❌ Cancel", command=self.window.destroy, width=180, height=45, font=ctk.CTkFont(size=15, weight="bold"), fg_color="#95a5a6", hover_color="#7f8c8d").pack(side="left", padx=10)
+        ctk.CTkButton(button_frame, text="❌ Cancel", command=self.window.destroy, width=180, height=45, font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), fg_color="#95a5a6", hover_color="#7f8c8d").pack(side="left", padx=10)
     
     # Save changes method
     def save_changes(self):
@@ -1215,20 +1215,20 @@ class EditQuoteWindow:
         main_frame.pack(fill="both", expand=True, padx=20, pady=20)
 
         # Title
-        ctk.CTkLabel(main_frame, text=f"✏️ Edit Motivational Quote (ID: {self.quote[0]})", font=ctk.CTkFont(size=24, weight="bold")).pack(pady=(20, 30))
+        ctk.CTkLabel(main_frame, text=f"✏️ Edit Motivational Quote (ID: {self.quote[0]})", font=ctk.CTkFont(family="Times New Roman", size=28, weight="bold")).pack(pady=(20, 30))
 
         # Quote 
-        ctk.CTkLabel(main_frame, text="Quote:", font=ctk.CTkFont(size=14, weight="bold")).pack(anchor="w", padx=30, pady=(10, 5))
+        ctk.CTkLabel(main_frame, text="Quote:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).pack(anchor="w", padx=30, pady=(10, 5))
 
-        self.quote_textbox = ctk.CTkTextbox(main_frame, height=150, font=ctk.CTkFont(size=13))
+        self.quote_textbox = ctk.CTkTextbox(main_frame, height=150, font=ctk.CTkFont(family="Times New Roman", size=17))
 
         self.quote_textbox.insert("1.0", self.quote[1])
         self.quote_textbox.pack(fill="x", padx=30, pady=(0, 20))
 
         # Author 
-        ctk.CTkLabel(main_frame, text="Author:", font=ctk.CTkFont(size=14, weight="bold")).pack(anchor="w", padx=30, pady=(0, 5))
+        ctk.CTkLabel(main_frame, text="Author:", font=ctk.CTkFont(family="Times New Roman", size=18, weight="bold")).pack(anchor="w", padx=30, pady=(0, 5))
 
-        self.author_entry = ctk.CTkEntry(main_frame, height=40, font=ctk.CTkFont(size=13))
+        self.author_entry = ctk.CTkEntry(main_frame, height=40, font=ctk.CTkFont(family="Times New Roman", size=17))
         self.author_entry.insert(0, self.quote[2])
         self.author_entry.pack(fill="x", padx=30, pady=(0, 30))
 
@@ -1236,8 +1236,8 @@ class EditQuoteWindow:
         button_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
         button_frame.pack(pady=20)
 
-        ctk.CTkButton(button_frame, text="💾 Save Changes", command=self.save_changes, width=180, height=45, font=ctk.CTkFont(size=15, weight="bold"), fg_color="#2ecc71", hover_color="#27ae60").pack(side="left", padx=10)
-        ctk.CTkButton(button_frame, text="❌ Cancel", command=self.window.destroy, width=180, height=45, font=ctk.CTkFont(size=15, weight="bold"), fg_color="#95a5a6", hover_color="#7f8c8d").pack(side="left", padx=10)
+        ctk.CTkButton(button_frame, text="💾 Save Changes", command=self.save_changes, width=180, height=45, font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), fg_color="#2ecc71", hover_color="#27ae60").pack(side="left", padx=10)
+        ctk.CTkButton(button_frame, text="❌ Cancel", command=self.window.destroy, width=180, height=45, font=ctk.CTkFont(family="Times New Roman", size=19, weight="bold"), fg_color="#95a5a6", hover_color="#7f8c8d").pack(side="left", padx=10)
     
     # Save changes method
     def save_changes(self):
