@@ -492,7 +492,7 @@ class IncidentXApp:
         display_frame.pack(fill="both", expand=True, padx=20, pady=(10, 20))
 
         header_frame = ctk.CTkFrame(display_frame, fg_color="transparent")
-        header_frame.pack(fill="x", pady=(15, 10), padx=15)
+        header_frame.pack(fill="x", pady=(20, 15), padx=20)
     
         ctk.CTkLabel(header_frame, text="Motivational Quotes Collection", font=ctk.CTkFont(family="Times New Roman", size=22, weight="bold")).pack(side="left")
 
@@ -774,6 +774,10 @@ class IncidentXApp:
         # Delete button
         delete_btn = ctk.CTkButton(button_frame, text="🗑️ Delete Quote", command=lambda: self.delete_quote_by_id(quote[0]), width=60, font=ctk.CTkFont(family="Times New Roman", size=16), fg_color="#e74c3c", hover_color="#c0392b")
         delete_btn.pack(side="left", padx=3)
+
+        # Random quote button
+        random_btn = ctk.CTkButton(button_frame, text="🎲 Random Quote", command=self.show_random_quote, width=60, font=ctk.CTkFont(family="Times New Roman", size=16), fg_color="#9b59b6", hover_color="#8e44ad")
+        random_btn.pack(side="left", padx=3)
 
         # Store quote ID 
         card.quote_id = quote[0]
