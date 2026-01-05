@@ -512,7 +512,33 @@ class IncidentXApp:
         ctk.CTkButton(btn_frame, text="🎲 Random Quote", command=self.show_random_quote, width=140, font=ctk.CTkFont(family="Times New Roman", size=17, weight="bold"), fg_color="#9b59b6", hover_color="#8e44ad").pack(side="left", padx=5)
 
         self.refresh_quotes()
+    
+    def check_duplicate_id(self, id_number, exclude_id=None):
+        """
+        Check if ID number already exists in the database
+        exclude_id: used when editing to exclude current record
+        Returns: duplicate record if found, None otherwise
+        """
+        try:
+            connect = self.get_db_connection()
+            cursor = connect.cursor()
 
+            if exclude_id:
+                cursor.execute("SELECT * FROM incidents WHERE idNumber = ? AND id != ?", 
+                          (id_number, exclude_id))
+            else:
+                cursor.execute("SELECT * FROM incidents WHERE idNumber = ?", 
+                           (id_number,))
+        
+            result = cursor.fetchone()
+            connect.close()
+        
+            return result  # ✅ Return the actual record (tuple) or None
+    
+        except sqlite3.Error as e:
+            messagebox.showerror("Database Error", f"An error has occurred: {e}")
+            return None
+        
     def submit_incident_report(self):
         # Submit incident report method
         name = self.name_entry.get().strip()
@@ -521,6 +547,19 @@ class IncidentXApp:
 
         if not name or not id_number or not description:
             messagebox.showwarning("Input Error", "Please fill in all required fields!")
+            return
+        
+        # Check for duplicate ID number
+        duplicate = self.check_duplicate_id(id_number)
+        if duplicate:
+            messagebox.showwarning("Duplicate ID Number Found!",
+                f"The ID number '{id_number}' has already been used!\n\n"
+                f"Existing Record Details:\n"
+                f"• Name: {duplicate[3]}\n"
+                f"• Person Type: {duplicate[2]}\n"
+                f"• Date Reported: {duplicate[1]}\n"
+                f"• Incident Type: {duplicate[5]}\n\n"
+                f"Please verify the ID number and try again.")
             return
         
         try:
@@ -660,7 +699,7 @@ class IncidentXApp:
             connect.close()
 
             if incident:
-                EditIncidentWindow(self.root, self.db_name, incident, self.refresh_records)
+                EditIncidentWindow(self.root, self.db_name, incident, self.refresh_records, self)
 
         except sqlite3.Error as e:
             messagebox.showerror("Database Error", f"An error has occurred: {e}")
@@ -1084,13 +1123,14 @@ In the context of educational institutions, SDG 16 focuses on:
 # Edit Incident Class Window
 class EditIncidentWindow:
     # Constructor for the Edit Incident Window
-    def __init__(self, parent, db_name, incident, refresh_callback):
+    def __init__(self, parent, db_name, incident, refresh_callback, main_app):
         self.window = ctk.CTkToplevel(parent)
         self.window.title("Edit Incident Report")
         self.window.geometry("550x650")
         self.db_name = db_name
         self.incident = incident
         self.refresh_callback = refresh_callback
+        self.main_app = main_app
 
         self.create_edit_ui()
 
@@ -1177,6 +1217,20 @@ class EditIncidentWindow:
             messagebox.showwarning("Input Error", "Please fill in all required fields!")
             return
         
+        duplicate = self.main_app.check_duplicate_id (id_number, self.incident[0])
+        if duplicate:
+            messagebox.showerror(
+            "Duplicate ID Number Found!",
+            f"The ID number '{id_number}' is already used by another incident!\n\n"
+            f"Existing Record Details:\n"
+            f"• Name: {duplicate[3]}\n"
+            f"• Person Type: {duplicate[2]}\n"
+            f"• Date Reported: {duplicate[1]}\n"
+            f"• Incident Type: {duplicate[5]}\n\n"
+            f"Please use a different ID number."
+            )
+            return
+
         try:
             connect = self.get_db_connection()
             cursor = connect.cursor()
